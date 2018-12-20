@@ -42,6 +42,6 @@ To enable github pages, in Github repository's page -> setting -> github pages s
   * [Markdown Extended Syntax](https://www.markdownguide.org/extended-syntax)
   
 ## TBD
-[ ] Jekyll and Hexo internals
-[ ] How to customize Jekyll or Hexo
-[ ] Reinventing the wheel like Jekyll or Hexo.
+* [ ] Jekyll and Hexo internals
+* [ ] How to customize Jekyll or Hexo
+* [ ] Reinventing the wheel like Jekyll or Hexo.
