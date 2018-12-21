@@ -98,7 +98,20 @@ C++03 Standard Annex C Compatibility C.1.2 Clause 3: basic concepts
 |        const     | extern const     |
 |  static type     | type             |
 
+##  in-class initializers only use = or {}
+if use parenthesis, will cause ambiguous.
+```
+class BadTimes {
+    struct Overloaded;
+    int Overloaded;            // Legal, but a very strange idea.
+
+    int confusing(Overloaded); // <-- it's ambiguous since c++11 if allow to use parenthesis, can be a method or a data member.
+    int not_confusing(Overloaded); // it's clear there's a data member initialized to the value of Overloaded.
+};
+```
+
 ## references
 * [Declarations/definitions as statements in C and C++](https://stackoverflow.com/questions/49861965/declarations-definitions-as-statements-in-c-and-c)
 * [What is the difference between a definition and a declaration?](https://stackoverflow.com/questions/1410563/what-is-the-difference-between-a-definition-and-a-declaration)
 * [const and global](https://stackoverflow.com/questions/9032475/const-and-global)
+* [Why can in-class initializers only use = or {}?](https://stackoverflow.com/questions/16329962/why-can-in-class-initializers-only-use-or)
