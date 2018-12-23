@@ -75,7 +75,7 @@
       };
      ```
   * Vardic Macros
-    ```
+    ```c
     #define eprintf(…) fprintf (stderr, __VA_ARGS__)
     eprintf ("%s:%d: ", input_file, lineno)
      →  fprintf (stderr, "%s:%d: ", input_file, lineno)
@@ -138,7 +138,7 @@
         Nested calls to a macro.
 We say that nested calls to a macro occur when a macro’s argument contains a call to that very macro. For example, if f is a macro that expects one argument, f (f (1)) is a nested pair of calls to f. The desired expansion is made by expanding f (1) and substituting that into the definition of f. The prescan causes the expected result to happen. Without the prescan, f (1) itself would be substituted as an argument, and the inner use of f would appear during the main scan as an indirect self-reference and would not be expanded.
       * Macros used in arguments, whose expansions contain unshielded commas.
-        ```
+        ```c
         #define foo  a,b
         #define bar(x) lose(x)
         #define lose(x) (1 + (x))
