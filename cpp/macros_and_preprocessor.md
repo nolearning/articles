@@ -6,13 +6,13 @@
 * Function-like Macros
   * `#define mfunc(a, b) (a) + (b)`
   * A function-like macro is only expanded if its name appears with a pair of parentheses after it.
-    ```
+    ```c
     #define foo() xxxx
     foo(); -> xxxx
     x = foo; //just let it alone
     ```
   * Is there are spaces between the macro name and the parentheses, it defines an object-like macro whose expansion happens to begin with a pair of parentheses
-    ```
+    ```c
     #define lang_init ()    c_init()
     lang_init()
       → () c_init()()
@@ -26,7 +26,7 @@
      → int x[] = { 1, 2, 3 };
   ```
 * When the preprocessor expands a macro name, the macro’s expansion replaces the macro invocation, then the expansion is examined for more macros to expand
-  ```c++
+  ```c
   #define VERSION 1
   #define OS_VERSION VERSION
   // OS_VERSION -> VERSION -> 1, 
@@ -150,4 +150,4 @@ We say that nested calls to a macro occur when a macro’s argument contains a c
         ```
 ## References
 * [Macros](https://gcc.gnu.org/onlinedocs/cpp/Macros.html)
-# [Can gcc output C code after preprocessing?](https://stackoverflow.com/questions/4900870/can-gcc-output-c-code-after-preprocessing)
+* [Can gcc output C code after preprocessing?](https://stackoverflow.com/questions/4900870/can-gcc-output-c-code-after-preprocessing)
