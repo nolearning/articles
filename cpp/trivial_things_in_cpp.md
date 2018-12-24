@@ -14,7 +14,7 @@
 * User-provided constructors in [dcl.fct.def.default]/5
   > Explicitly-defaulted functions and implicitly-declared functions are collectively called defaulted functions, and the implementation shall provide implicit definitions for them (12.1 12.4, 12.8), which might mean defining them as deleted. A function is user-provided if it is user-declared and not explicitly defaulted or deleted on its first declaration. A user-provided explicitly-defaulted function (i.e., explicitly defaulted after its first declaration) is defined at the point where it is explicitly defaulted; if such a function is implicitly defined as deleted, the program is ill-formed.
   
-```
+```c++
 std::cout << std::is_trivial<std::pair<int,int>>::value << '\n';      // ==> 0 
 std::cout << std::is_trivially_default_constructible<std::pair<int,int>>::value << '\n'; // ==> 0
 std::cout << std::is_trivially_destructible<std::pair<int,int>>::value << '\n'; // ==> 1
