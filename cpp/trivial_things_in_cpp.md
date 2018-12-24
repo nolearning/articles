@@ -23,3 +23,5 @@ std::cout << std::is_trivially_destructible<std::pair<int,int>>::value << '\n'; 
 ## References
 * [Which rules determine whether an object is trivially copyable](https://stackoverflow.com/questions/30096911/which-rules-determine-whether-an-object-is-trivially-copyable)
 * [Why can't std::tuple<int> be trivially copyable?](https://stackoverflow.com/questions/38779985/why-cant-stdtupleint-be-trivially-copyable)
+* [cppreference is_trivial](https://en.cppreference.com/w/cpp/types/is_trivial)
+* [std::is_destructible, std::is_trivially_destructible, std::is_nothrow_destructible](https://en.cppreference.com/w/cpp/types/is_destructible)
