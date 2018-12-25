@@ -34,7 +34,30 @@
       4. restart emacs
 
 ## Course Topics
-### Part A:
+### Part A (SML):
+#### Syntax & sematics & environment
+* static environment & dynamic environment
+  static environment are build up by elaboration and dynamic environment by evaluation of declarations.  
+  What type (if any) a binding has depends on a static  environment, which is roughly the types of the preceding bindings in the file.  How a binding is evaluated depends on a dynamic environment, which is roughly the values of the preceding bindings in the file.  
+```sml
+val x = 34;
+(* static environment: x : int *)
+(* dynamic environment: x --> 34 *)
+val y = 17;
+(* static environment: x : int, y : int *)
+(* dynamic environment: x --> 34, y --> 17 *)
+```
+* syntax -- how to write something
+* semantics -- what that something means
+  - Type-checking(before program runs)
+  - Evaluation (as program runs)
+* For variable bindings
+  - Type-check expression and extend *static environment*
+  - Evaluate expression and extend *dynamic environment*
+* Bindings in ML live in environments. Conceptually, each environment (except the top-level environment) consists of
+  - a list of name-value pairs (the bindings in this environment); and
+  - a pointer to the "parent" environment. This pointer refers to the textually enclosing environment at the place where the environment is first defined. (The top-level environment differs only in that it does not have a parent pointer.)
+
 * Syntax vs. semantics vs. idioms vs. libraries vs. tools
 * ML basics (bindings, conditionals, records, functions)
 * Recursive functions and recursive types
@@ -43,6 +66,10 @@
 * Tail recursion
 * Higher-order functions; closures
 * Lexical scope
+  - Lexical vs. dynamic scoping
+    The scoping rule used in ML is called lexical scoping, because names refer to their nearest preceding lexical (textual) definition.  
+    The opposite scheme is called dynamic scoping --- under dynamic scoping, names from outer scopes are re-evaluated using the most recently executed definition, not the one present when the code was originally written.
+* [More on scoping of names](https://courses.cs.washington.edu/courses/cse341/04wi/lectures/05-ml-scoping.html)
 * Currying
 * Syntactic sugar
 * Equivalence and effects
