@@ -33,6 +33,75 @@ void foo() {
           // because qualified name lookup for A::X finds the data member
 }
 ```
+
+## static member in class template
+From N3290, 14.6:
+> A [...] static data member of a class template shall be defined in every translation unit in which it is implicitly instantiated [...], unless the corresponding specialization is explicitly instantiated [...] .
+
+```c++
+template <typename T>
+struct A {
+  static int num;
+};
+int main () {
+   /* under gcc get a link error, undefined reference to `A<char>::num'
+    * under clang will get warning at compiling and error when link
+   // warning: instantiation of variable 'A<char>::num' required here, but no definition is available
+   // Undefined symbols for architecture x86_64, "A<char>::num", referenced from: main
+   return A<char>::num; 
+}
+
+// the right way
+template <typename T>
+struct A {
+  static int num; //declaration
+};
+
+template <typename T>
+int A<T>::num; // definition
+
+// since c++17
+template <typename T>
+struct A {
+   static inline int num;
+};
+```
+why? First, look at static member in class, before c++17, as declare a struct/class with static members, these static members should define in source file, as the c++ **one definition rule**.
+```c++
+// some header file
+struct SA {
+  static int num;
+};
+
+// some source file
+int SA::num;
+
+// since c++17
+struct SA {
+  inline static int num;
+};
+```
+So, the template class will define the static members outside the template class's declaration, to keep same behaviour when template class initilazation. But, the template static member can define in header while the specilization one only define in source file.
+```c++
+// in header file
+template <typename T>
+struct A {
+  static int num; //declaration
+};
+
+template <typename T>
+int A<T>::num; // definition
+
+// below line will get error at link time as redefined in multiple source
+template<>
+int A<char>::num;
+// 
+```
+
+* [What should happen to template class static member variables with definition in the .h file](https://stackoverflow.com/questions/7108914/what-should-happen-to-template-class-static-member-variables-with-definition-in)
+* [Static member initialization in a class template](https://stackoverflow.com/questions/3229883/static-member-initialization-in-a-class-template)
+* [Why does a static data member need to be defined outside of the class?](https://stackoverflow.com/questions/18749071/why-does-a-static-data-member-need-to-be-defined-outside-of-the-class)
+
 ## Templates Partial Specialization
 * class partial template
 ```c++
