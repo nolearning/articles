@@ -17,16 +17,22 @@
     * [Why Emacs overrides my PATH when it runs bash?](https://emacs.stackexchange.com/questions/14159/why-emacs-overrides-my-path-when-it-runs-bash)
 
 ## Basic Operation
-* Move
-  C-p, C-n, C-f, C-b, M-b, M-f, C-a, C-e, M-a, M-e, M-<, M->
-* Edit
-  <DEL>, C-d, M-<DEL>, M-d, C-k, M-k, C-/, C--, C-x u, C-g undo
-* File&Buffer
-  C-x C-f, C-x C-s, C-x s, C-x C-b, C-x b,	C-x C-c，C-x 1，C-x u
-* Window
-  C-x o, C-x 1, C-x 2, C-x 3
+* Move: `C-p, C-n, C-f, C-b, M-b, M-f, C-a, C-e, M-a, M-e, M-<, M->`
+* Edit: `<DEL>, C-d, M-<DEL>, M-d, C-k, M-k, C-/, C--, C-x u, C-g undo`
+* File&Buffer: `C-x C-f, C-x C-s, C-x s, C-x C-b, C-x b,	C-x C-c，C-x 1，C-x u`
+* Window: `C-x o, C-x 1, C-x 2, C-x 3`
 
-
+## Emacc Lisp 
+### usage
+ * \*scratch\* buffer
+ * `C-j` runs the command `eval-print-last-sexp`
+ * `C-x C-e` Evaluate sexp before point; print value in the echo area
+ * `M-x ielm` Inferior Emacs Lisp Mode, A nice little mode that acts like an interactive Lisp interpreter.
+ * `C-h i` choose  `Emacs Lisp Intro` and `Elisp`
+### language
+ * Lisp programming is mostly about symbols (and sometimes numbers) within lists.
+ * [Lisp Atoms](https://www.gnu.org/software/emacs/manual/html_node/eintr/Lisp-Atoms.html#Lisp-Atoms)
+ 
 ## Packages
 ### [Company](http://company-mode.github.io/)
 ```lisp
