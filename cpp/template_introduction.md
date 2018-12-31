@@ -191,12 +191,12 @@ f((int*)0); //==> #2
 ## boost function&bind
 
 ## boost any
-[How the Boost Bind Library Can Improve Your C++ Programs(http://www.informit.com/articles/article.aspx?p=412354)
-[详细解析boost中bind的实现](https://blog.csdn.net/hengyunabc/article/details/7773250)
-[Boost源码剖析](https://blog.csdn.net/pongba/article/category/37521)
-[std::bind 的实现原理](http://blog.guorongfei.com/2017/01/27/bind-implementation/)
-[How Do Those Funky Placeholders Work?](https://accu.org/index.php/journals/1397)
-[std::placeholders::_1, std::placeholders::_2, ..., std::placeholders::_N](https://en.cppreference.com/w/cpp/utility/functional/placeholders)
+* [How the Boost Bind Library Can Improve Your C++ Programs](http://www.informit.com/articles/article.aspx?p=412354)
+* [详细解析boost中bind的实现](https://blog.csdn.net/hengyunabc/article/details/7773250)
+* [Boost源码剖析](https://blog.csdn.net/pongba/article/category/37521)
+* [std::bind 的实现原理](http://blog.guorongfei.com/2017/01/27/bind-implementation/)
+* [How Do Those Funky Placeholders Work?](https://accu.org/index.php/journals/1397)
+* [std::placeholders::_1, std::placeholders::_2, ..., std::placeholders::_N](https://en.cppreference.com/w/cpp/utility/functional/placeholders)
 
 
 ## Variadic templates
