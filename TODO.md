@@ -16,5 +16,5 @@
 * multiple_inheritance_and_the_diamond_problem.md
 
 ## FP
-* [ ]lisp
-* [ ]scala
+* [ ] lisp
+* [ ] scala
