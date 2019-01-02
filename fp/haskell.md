@@ -11,6 +11,13 @@ read $ show 3 :: Int -- ==> 3
 ## pattern match
 * [Haskell/Pattern matching](https://en.wikibooks.org/wiki/Haskell/Pattern_matching)
 
+## Formatting
+* Text.Printf
+* HoleyMonoid
+* Formatting
+
+[Formatting in Haskell](https://chrisdone.com/posts/formatting)
+
 ## GHCI
 * GHCI tries to choose a type signature for your function more strictly than GHC will
 ```
