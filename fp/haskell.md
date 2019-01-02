@@ -11,6 +11,17 @@ read $ show 3 :: Int -- ==> 3
 ## pattern match
 * [Haskell/Pattern matching](https://en.wikibooks.org/wiki/Haskell/Pattern_matching)
 
+## function
+### `$` operator and `.` operator
+```haskell
+f(g(x)
+f $ g (x)
+f $ g $ x
+(f . g)(x)
+f . g $ x
+```
+[What is the difference between . (dot) and $ (dollar sign)?](https://stackoverflow.com/questions/940382/what-is-the-difference-between-dot-and-dollar-sign)
+
 ## Formatting
 * Text.Printf
 * HoleyMonoid
