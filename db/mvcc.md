@@ -20,3 +20,5 @@
 * [Implementing Your Own Transactions with MVCC](http://elliot.land/post/implementing-your-own-transactions-with-mvcc)
 * [Implementation of MVCC Transactions for Key-Value Stores](https://highlyscalable.wordpress.com/2012/01/07/mvcc-transactions-key-value/)
 * [Distributed MVCC And Transactional SQL Design](https://cwiki.apache.org/confluence/display/IGNITE/Distributed+MVCC+And+Transactional+SQL+Design)
+
+* [数据库中的引擎、事务、锁、MVCC（三）](https://zhuanlan.zhihu.com/p/53921376)
