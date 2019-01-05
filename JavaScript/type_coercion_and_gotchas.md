@@ -21,6 +21,32 @@
 | Object (native or host and does implement [[Call]]) |	"function" |
 | Object (host and does not implement [[Call]])  |	Implementation-defined except may not be "undefined", "boolean", "number", or "string". |
 
+### history of typeof null
+> The first JavaScript engine represented JavaScript values as 32-bit words. The lowest 3 bits of such a word were used as a type tag, to indicate whether the value was an object, an integer, a double, a string, or a boolean (as you can see, even this early engine already stored numbers as integers if possible).
+>
+> The type tag for objects was 000. In order to represent the value null, the engine used the machine language NULL pointer, a word where all bits are zero. typeof checked the type tag to determine the type of value, which is why it reported null to be an object.
+```JavaScript
+function isObject(value) {
+    return (value !== null
+       && (typeof value === 'object'
+           || typeof value === 'function'));
+}
+```
+
+### undefined
+`typeof x === 'undefined'` has two use caess:
+1. It determines whether x is undefined.
+2. It determines whether the variable x exists. 
+
+### typeof vs. instanceof
+* instanceof: Checking Whether an Object Is an Instance of a Given Constructor
+```JavaScript
+{} instanceof Object // ==> true
+[] instanceof Array && [] instanceof Object // ==> true
+```
+
+* [Speaking JavaScript Chapter 9. Operators](http://speakingjs.com/es5/ch09.html#isobject_typeof)
+
 ## operator
 | operator | evaluation |
 | -- | -- |
