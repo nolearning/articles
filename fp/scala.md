@@ -5,3 +5,4 @@
 * [Functional Programming in Scala](https://www.manning.com/books/functional-programming-in-scala)
 * [Functional and Reactive Domain Modeling](https://www.manning.com/books/functional-and-reactive-domain-modeling)
 * [High Performance Spark](http://shop.oreilly.com/product/0636920046967.do)
+* [Comparing Scala to F#](https://mikhail.io/2016/08/comparing-scala-to-fsharp/)
