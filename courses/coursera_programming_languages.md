@@ -54,7 +54,20 @@ val y = 17;
 * For variable bindings
   - Type-check expression and extend *static environment*
   - Evaluate expression and extend *dynamic environment*
-
+* Variables
+  - Syntax:  
+    sequence of letters, digits, _, not starting with digit
+  - Type-checking:   
+    Look up type in current static environment
+    If not there, fail
+  - Evaluation:   
+    Look up value in current dynamic environment
+* Addition
+  - Syntax: *e1 + e2* where *e1* and *e2* are expressions
+  - Type-checking:  
+    if *e1* and *e2* have type int, then *e1 + e2* has type int.
+* Evaluation  
+  - if *e1* evaluates to *v1* and *e2* evaluates to *v2*, then *e1 + e2* evaluates to sum of *v1* and *v2*
 
 * Syntax vs. semantics vs. idioms vs. libraries vs. tools
 * ML basics (bindings, conditionals, records, functions)
