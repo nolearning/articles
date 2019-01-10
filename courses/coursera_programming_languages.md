@@ -50,7 +50,8 @@ val y = 17;
 1. syntax -- how to write something / How do you write language constructs?
 2. semantics -- what that something means / What do programs mean? (Evaluation rules)
   - Type-checking(before program runs)
-  - Evaluation (as program runs)
+    - Valid Types: what types are allowed for subexpressions, and what type this expression returns
+  - Evaluation (as program runs), how we run this when it's part of a program
 3. Idioms -- What are typical patterns for using language features to express your computation?
 4. Libraries -- What facilities does the language (or a well-known project) provide “standard”? (E.g., file access, data structures)
 5. Tools: What do language implementations provide to make your job easier? (E.g., REPL, debugger, code formatter, ...)
@@ -61,10 +62,18 @@ val y = 17;
 > * Libraries and tools crucial, but often learn new ones “on the job”
 >   - We are learning semantics and how to use that knowledge to understand all software and employ appropriate idioms
 >   - By avoiding most libraries/tools, our languages may look “silly” but so would anylanguage used this way
- 
- * For variable bindings
-    - Type-check expression and extend *static environment*
-    - Evaluate expression and extend *dynamic environment*
+
+* Expressions
+  - Many kinds of expressions: `34, true, e1 + e2, if e1 then e2 else e3`
+  - Can get arbitarily large since any subexpression can contain subsubexpressions, etc.
+  - Every kind of expression has
+    1. Syntax
+    2. Type-checking rules
+      * Produces a type or fails (with a bad error message)
+      * E.g. `int bool unit`
+    3. Evaluation rules (used only on things that type-check)
+      * Produces a value (or exception or infinite-loop)
+
   * Variables
     - Syntax:  
       sequence of letters, digits, _, not starting with digit
@@ -79,6 +88,9 @@ val y = 17;
       if *e1* and *e2* have type int, then *e1 + e2* has type int.
   * Evaluation  
     - if *e1* evaluates to *v1* and *e2* evaluates to *v2*, then *e1 + e2* evaluates to sum of *v1* and *v2*
+  * For variable bindings
+    - Type-check expression and extend *static environment*
+    - Evaluate expression and extend *dynamic environment*
 
 * Syntax vs. semantics vs. idioms vs. libraries vs. tools
 * ML basics (bindings, conditionals, records, functions)
