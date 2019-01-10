@@ -47,27 +47,37 @@ val y = 17;
 (* static environment: x : int, y : int *)
 (* dynamic environment: x --> 34, y --> 17 *)
 ```
-* syntax -- how to write something
-* semantics -- what that something means
+1. syntax -- how to write something / How do you write language constructs?
+2. semantics -- what that something means / What do programs mean? (Evaluation rules)
   - Type-checking(before program runs)
   - Evaluation (as program runs)
-* For variable bindings
-  - Type-check expression and extend *static environment*
-  - Evaluate expression and extend *dynamic environment*
-* Variables
-  - Syntax:  
-    sequence of letters, digits, _, not starting with digit
-  - Type-checking:   
-    Look up type in current static environment
-    If not there, fail
-  - Evaluation:   
-    Look up value in current dynamic environment
-* Addition
-  - Syntax: *e1 + e2* where *e1* and *e2* are expressions
-  - Type-checking:  
-    if *e1* and *e2* have type int, then *e1 + e2* has type int.
-* Evaluation  
-  - if *e1* evaluates to *v1* and *e2* evaluates to *v2*, then *e1 + e2* evaluates to sum of *v1* and *v2*
+3. Idioms -- What are typical patterns for using language features to express your computation?
+4. Libraries -- What facilities does the language (or a well-known project) provide “standard”? (E.g., file access, data structures)
+5. Tools: What do language implementations provide to make your job easier? (E.g., REPL, debugger, code formatter, ...)
+> * Syntax is usually uninteresting
+>   - A fact to learn, like “The American Civil War ended in 1865”
+>   - People obsess over subjective preferences
+> * Libraries and tools crucial, but often learn new ones “on the job”
+>   - We are learning semantics and how to use that knowledge to understand all software and employ appropriate idioms
+>   - By avoiding most libraries/tools, our languages may look “silly” but so would anylanguage used this way
+ 
+ * For variable bindings
+    - Type-check expression and extend *static environment*
+    - Evaluate expression and extend *dynamic environment*
+  * Variables
+    - Syntax:  
+      sequence of letters, digits, _, not starting with digit
+    - Type-checking:   
+      Look up type in current static environment
+      If not there, fail
+    - Evaluation:   
+      Look up value in current dynamic environment
+  * Addition
+    - Syntax: *e1 + e2* where *e1* and *e2* are expressions
+    - Type-checking:  
+      if *e1* and *e2* have type int, then *e1 + e2* has type int.
+  * Evaluation  
+    - if *e1* evaluates to *v1* and *e2* evaluates to *v2*, then *e1 + e2* evaluates to sum of *v1* and *v2*
 
 * Syntax vs. semantics vs. idioms vs. libraries vs. tools
 * ML basics (bindings, conditionals, records, functions)
