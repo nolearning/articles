@@ -54,6 +54,7 @@ val y = 17;
 3. Idioms -- What are typical patterns for using language features to express your computation?
 4. Libraries -- What facilities does the language (or a well-known project) provide “standard”? (E.g., file access, data structures)
 5. Tools: What do language implementations provide to make your job easier? (E.g., REPL, debugger, code formatter, ...)
+> focus on semantics and idioms
 > * Syntax is usually uninteresting
 >   - A fact to learn, like “The American Civil War ended in 1865”
 >   - People obsess over subjective preferences
