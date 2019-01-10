@@ -49,9 +49,9 @@ val y = 17;
 ```
 1. syntax -- how to write something / How do you write language constructs?
 2. semantics -- what that something means / What do programs mean? (Evaluation rules)
-  - Type-checking(before program runs)
-    - Valid Types: what types are allowed for subexpressions, and what type this expression returns
-  - Evaluation (as program runs), how we run this when it's part of a program
+   - Type-checking(before program runs)
+     - Valid Types: what types are allowed for subexpressions, and what type this expression returns
+   - Evaluation (as program runs), how we run this when it's part of a program
 3. Idioms -- What are typical patterns for using language features to express your computation?
 4. Libraries -- What facilities does the language (or a well-known project) provide “standard”? (E.g., file access, data structures)
 5. Tools: What do language implementations provide to make your job easier? (E.g., REPL, debugger, code formatter, ...)
@@ -69,10 +69,10 @@ val y = 17;
   - Every kind of expression has
     1. Syntax
     2. Type-checking rules
-      * Produces a type or fails (with a bad error message)
-      * E.g. `int bool unit`
+       * Produces a type or fails (with a bad error message)
+       * E.g. `int bool unit`
     3. Evaluation rules (used only on things that type-check)
-      * Produces a value (or exception or infinite-loop)
+       * Produces a value (or exception or infinite-loop)
 
   * Variables
     - Syntax:  
