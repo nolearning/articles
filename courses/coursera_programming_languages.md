@@ -82,16 +82,41 @@ val y = 17;
       If not there, fail
     - Evaluation:   
       Look up value in current dynamic environment
+    - For variable bindings
+      - Type-check expression and extend *static environment*
+      - Evaluate expression and extend *dynamic environment*
   * Addition
     - Syntax: *e1 + e2* where *e1* and *e2* are expressions
     - Type-checking:  
       if *e1* and *e2* have type int, then *e1 + e2* has type int.
-  * Evaluation  
-    - if *e1* evaluates to *v1* and *e2* evaluates to *v2*, then *e1 + e2* evaluates to sum of *v1* and *v2*
-  * For variable bindings
-    - Type-check expression and extend *static environment*
-    - Evaluate expression and extend *dynamic environment*
-
+    - Evaluation  
+      - if *e1* evaluates to *v1* and *e2* evaluates to *v2*, then *e1 + e2* evaluates to sum of *v1* and *v2*
+  * Values
+    - All values are expressions, not all expressions are values
+    - Every value "evaluates to itself"
+    - E.g. `34, 17` have type int, `true, false` have type bool, `()` has type unit
+    
+* REPL(Read-Eval-Print-Loop)
+  - `use "some.sml"` enters bindings from the file `some.sml`
+* Errors
+  - Syntax: What you wrote means nothing or not the construct you intended
+  - Type-checking: What you wrote does not type-check
+  - Evaluation: It runs but produces wrong answer, or an exception, or an infinite loop
+* Shadowing
+  - Expressions in variable bindings are evaluated “eagerly”
+    - Before the variable binding “finishes”
+    - Afterwards, the expression producing the value is irrelevant
+  - There is no way to “assign to” a variable in ML
+    - There is no way to “assign to” a variable in ML
+* Function
+  - Early binding
+    - type is known before the variable is exercised during run-time, usually through a static, declarative means
+  - Late binding
+    - Late binding, dynamic binding[1], or dynamic linkage[2] is a computer programming mechanism in which the method being called upon an object or the function being called with arguments is looked up by name at runtime.   
+      Type is unknown until the variable is exercised during run-time; usually through assignment but there are other means to coerce a type; dynamically typed languages call this an underlying feature, but many statically typed languages have some method of achieving late binding.  
+      Implemented often using [special] dynamic types, introspection/reflection, flags and compiler options, or through virtual methods by borrowing and extending dynamic dispatch 
+  - [Late binding](https://en.wikipedia.org/wiki/Late_binding)
+  - [What is early and late binding?](https://softwareengineering.stackexchange.com/questions/200115/what-is-early-and-late-binding)
 * Syntax vs. semantics vs. idioms vs. libraries vs. tools
 * ML basics (bindings, conditionals, records, functions)
 * Recursive functions and recursive types
