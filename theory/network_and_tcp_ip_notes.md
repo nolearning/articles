@@ -106,3 +106,5 @@ Bob <--- Alice     ACK
 * [Why do we need a 3-way handshake? Why not just 2-way?](https://networkengineering.stackexchange.com/questions/24068/why-do-we-need-a-3-way-handshake-why-not-just-2-way)
 
 * [In TCP, the client sends a SYN then the server responds with an ACK of the SYN. But then the client goes back and sends another ACK before sending data. What's the point of the second ACK?](https://www.quora.com/In-TCP-the-client-sends-a-SYN-then-the-server-responds-with-an-ACK-of-the-SYN-But-then-the-client-goes-back-and-sends-another-ACK-before-sending-data-Whats-the-point-of-the-second-ACK/answer/Diwakar-Tundlam-1)
+
+* [TCP 为什么是三次握手，而不是两次或四次？](https://www.zhihu.com/question/24853633)
