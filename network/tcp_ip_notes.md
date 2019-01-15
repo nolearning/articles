@@ -124,3 +124,5 @@ Bob <--- Alice     ACK
 
 * [Retransmission (data networks)](https://en.wikipedia.org/wiki/Retransmission_(data_networks)
 * [What are the retransmission rules for TCP?](https://stackoverflow.com/questions/12956685/what-are-the-retransmission-rules-for-tcp)
+* [TCP Selective Acknowledgments (SACK)](http://packetlife.net/blog/2010/jun/17/tcp-selective-acknowledgments-sack/)
+* [TCP Selective Acknowledgment Options](https://tools.ietf.org/html/rfc2018)
