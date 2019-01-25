@@ -90,7 +90,10 @@ val y = 17;
     - "Strong typing" generally refers to use of programming language types in order to both capture invariants of the code, and ensure its correctness, and definitely exclude certain classes of programming errors. Thus there are many "strong typing" disciplines used to achieve these goals.
     - Some programming languages make it easy to use a value of one type as if it were a value of another type. This is sometimes described as "weak typing".
     - In a weakly typed language, variables can be implicitly coerced to unrelated types, whereas in a strongly typed language they cannot, and an explicit conversion is required.
-
+   - [Type system](https://en.wikipedia.org/wiki/Type_system)
+   - [Strong and weak typing](https://en.wikipedia.org/wiki/Strong_and_weak_typing)
+   - [Static/Dynamic vs Strong/Weak](https://stackoverflow.com/questions/2351190/static-dynamic-vs-strong-weak)
+   - [Static vs. dynamic typing of programming languages](https://pythonconquerstheuniverse.wordpress.com/2009/10/03/static-vs-dynamic-typing-of-programming-languages/)
 
 * Expressions
   - Many kinds of expressions: `34, true, e1 + e2, if e1 then e2 else e3`
