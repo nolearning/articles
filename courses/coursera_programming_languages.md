@@ -138,7 +138,7 @@ val y = 17;
     - Before the variable binding “finishes”
     - Afterwards, the expression producing the value is irrelevant
   - There is no way to “assign to” a variable in ML
-    - There is no way to “assign to” a variable in ML
+    - Can only shadow it in a later environment
 * Function
 
 * Syntax vs. semantics vs. idioms vs. libraries vs. tools
