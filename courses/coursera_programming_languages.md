@@ -73,28 +73,27 @@ val y = 17;
        * E.g. `int bool unit`
     3. Evaluation rules (used only on things that type-check)
        * Produces a value (or exception or infinite-loop)
-
-  * Variables
-    - Syntax:  
-      sequence of letters, digits, _, not starting with digit
-    - Type-checking:   
-      Look up type in current static environment
-      If not there, fail
-    - Evaluation:   
-      Look up value in current dynamic environment
-    - For variable bindings
-      - Type-check expression and extend *static environment*
-      - Evaluate expression and extend *dynamic environment*
-  * Addition
-    - Syntax: *e1 + e2* where *e1* and *e2* are expressions
-    - Type-checking:  
-      if *e1* and *e2* have type int, then *e1 + e2* has type int.
-    - Evaluation  
-      - if *e1* evaluates to *v1* and *e2* evaluates to *v2*, then *e1 + e2* evaluates to sum of *v1* and *v2*
-  * Values
-    - All values are expressions, not all expressions are values
-    - Every value "evaluates to itself"
-    - E.g. `34, 17` have type int, `true, false` have type bool, `()` has type unit
+* Variables
+  - Syntax:  
+    sequence of letters, digits, _, not starting with digit
+  - Type-checking:   
+    Look up type in current static environment
+    If not there, fail
+  - Evaluation:   
+    Look up value in current dynamic environment
+  - For variable bindings
+    - Type-check expression and extend *static environment*
+    - Evaluate expression and extend *dynamic environment*
+* Addition
+  - Syntax: *e1 + e2* where *e1* and *e2* are expressions
+  - Type-checking:  
+    if *e1* and *e2* have type int, then *e1 + e2* has type int.
+  - Evaluation  
+    - if *e1* evaluates to *v1* and *e2* evaluates to *v2*, then *e1 + e2* evaluates to sum of *v1* and *v2*
+* Values
+  - All values are expressions, not all expressions are values
+  - Every value "evaluates to itself"
+  - E.g. `34, 17` have type int, `true, false` have type bool, `()` has type unit
     
 * REPL(Read-Eval-Print-Loop)
   - `use "some.sml"` enters bindings from the file `some.sml`
