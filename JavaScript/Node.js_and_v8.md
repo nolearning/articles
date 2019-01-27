@@ -19,4 +19,4 @@
 * [Calling a v8 javascript function from c++ with an argument](https://stackoverflow.com/questions/11387015/calling-a-v8-javascript-function-from-c-with-an-argument)
 * [Understanding How the Chrome V8 Engine Translates JavaScript into Machine Code](https://medium.freecodecamp.org/understanding-the-core-of-nodejs-the-powerful-chrome-v8-engine-79e7eb8af964)
 
-* [编译 V8 源码]
+* [编译 V8 源码](https://zhuanlan.zhihu.com/p/25120909)
