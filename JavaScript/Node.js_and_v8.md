@@ -20,3 +20,5 @@
 * [Understanding How the Chrome V8 Engine Translates JavaScript into Machine Code](https://medium.freecodecamp.org/understanding-the-core-of-nodejs-the-powerful-chrome-v8-engine-79e7eb8af964)
 
 * [编译 V8 源码](https://zhuanlan.zhihu.com/p/25120909)
+* [使用 D8 分析 javascript 如何被 V8 引擎优化的](https://zhuanlan.zhihu.com/p/25122691)
+
