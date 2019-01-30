@@ -16,6 +16,9 @@
 * [6.824: Distributed Systems [Spring 2015] Youtube](https://www.youtube.com/playlist?list=PLkcQbKbegkMqiWf7nF8apfMRL4P4sw8UL)
 * [麻省理工 分布式系统 (MIT 6.824, Distributed Systems) bilibili](https://www.bilibili.com/video/av38073607/)
 
+* [MIT 6.824 动态扩缩容/负载均衡的强一致容灾K/V集群](https://zhuanlan.zhihu.com/p/51049133)
+
+
 ## Distributed System
 
 1. CS 436, Distributed System, University of Waterloo  
