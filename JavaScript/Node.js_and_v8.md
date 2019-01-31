@@ -22,7 +22,16 @@
 * [编译 V8 源码](https://zhuanlan.zhihu.com/p/25120909)
 * [使用 D8 分析 javascript 如何被 V8 引擎优化的](https://zhuanlan.zhihu.com/p/25122691)
 * [v8引擎是如何知道js数据类型的？](https://www.zhihu.com/question/62732293/answer/201723301)
-* [V8 团队的一个错误，使得整个互联网变慢])(https://zhuanlan.zhihu.com/p/29790641)
+* [How Blink Works 中文译文](https://zhuanlan.zhihu.com/p/52918538)
+* [V8 Ignition：JS 引擎与字节码的不解之缘](https://zhuanlan.zhihu.com/p/26669846)
+* [chrome浏览器页面渲染工作原理浅析](https://zhuanlan.zhihu.com/p/30134423)
+* [这种现象的原理是什么?setTimeout的规范在哪里,W3C?WHATWG?](https://www.zhihu.com/question/68303739/answer/263810716)
+* [Chrome 66 使用 DevTools 跟踪 JS 对象和 DOM 对象的引用](https://zhuanlan.zhihu.com/p/34272169)
+* [V8 将为 React hooks 改进数组解构的性能](https://zhuanlan.zhihu.com/p/49077183)
+* [V8 团队的一个错误，使得整个互联网变慢](https://zhuanlan.zhihu.com/p/29790641)
 * [V8 中的垃圾收集（GC），图文指南](https://zhuanlan.zhihu.com/p/29276031)
 * [分支预测：为什么有序数组比无序数组快?](https://zhuanlan.zhihu.com/p/39456322)
+
+
+
 
