@@ -22,4 +22,7 @@
 * [编译 V8 源码](https://zhuanlan.zhihu.com/p/25120909)
 * [使用 D8 分析 javascript 如何被 V8 引擎优化的](https://zhuanlan.zhihu.com/p/25122691)
 * [v8引擎是如何知道js数据类型的？](https://www.zhihu.com/question/62732293/answer/201723301)
+* [V8 团队的一个错误，使得整个互联网变慢])(https://zhuanlan.zhihu.com/p/29790641)
+* [V8 中的垃圾收集（GC），图文指南](https://zhuanlan.zhihu.com/p/29276031)
+* [分支预测：为什么有序数组比无序数组快?](https://zhuanlan.zhihu.com/p/39456322)
 
