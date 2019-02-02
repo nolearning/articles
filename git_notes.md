@@ -32,3 +32,33 @@ git config --global --unset user.password
   git mv caseSensitiveDir tmpName
   git mv tmpName case_sensitive_dir
   ```
+
+
+## Changing Git Author
+
+### using git config
+
+### specify author when git commit
+```shell
+git commit --author="authorName <author@eamil.com>"
+```
+
+### using --amend for the very last commit
+```shell
+git commit --amend --author="authorName <author@email.com>"
+```
+
+### using interactive rebase
+```shell
+git rebase -i -p last_good_commit_hash_like_0ad14fa5
+# editor will open, mark all the commits you want to change with the "edit" keyword
+# then will give you tips
+# stop at a commit_has, you can amend the commit now, with
+# git commit --amend
+# once you are satisfied with your changes, run
+# git rebase --continue
+git commit --amend --author="authorName <author@email.com>"
+git rebase --continue
+```
+
+### using git filter-branch
