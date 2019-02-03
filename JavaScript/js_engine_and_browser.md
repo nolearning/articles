@@ -14,3 +14,5 @@
 
 * [js系列：事件（一）](https://zhuanlan.zhihu.com/p/24775417)
 
+* [The JavaScript Event Loop](https://flaviocopes.com/javascript-event-loop/)
+
