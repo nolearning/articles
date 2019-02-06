@@ -141,6 +141,8 @@ val y = 17;
     - Can only shadow it in a later environment
 * Function
 
+* Recursion
+
 * Syntax vs. semantics vs. idioms vs. libraries vs. tools
 * ML basics (bindings, conditionals, records, functions)
 * Recursive functions and recursive types
