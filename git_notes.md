@@ -79,6 +79,9 @@ then
     export GIT_AUTHOR_EMAIL="$NEW_EMAIL"
 fi
 ' --tag-name-filter cat -- --branches --tags
+
+git push --force --tags origin 'refs/heads/*'
 ```
 
 * [How can I change the author name / email of a commit?](https://www.git-tower.com/learn/git/faq/change-author-name-email)
+* [Changing author info](https://help.github.com/articles/changing-author-info/)
