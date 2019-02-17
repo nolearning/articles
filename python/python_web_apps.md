@@ -1,5 +1,11 @@
 # Python Web Apps
 
+## Werkkkzeug
+* [Werkzeug 教程](https://werkzeug-docs-cn.readthedocs.io/zh_CN/latest/tutorial.html)
+
+## Flask
+* [Flask源码剖析](https://zhuanlan.zhihu.com/p/24629677)
+
 ## Deployment
 
 0. Development Server, such as `Django Development Server`, `Flask Simple Server`
