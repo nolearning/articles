@@ -12,3 +12,32 @@
   - `pip install <package>` under venv
   - `deactivate`
   
+## Formatting
+* % - old style
+* '{}'.format - new style
+
+* [Using % and .format() for great good!](https://pyformat.info/)
+
+## Decorators
+```python
+def log(func):
+  def decorator(*args, **kwargs):
+    print('Log: function {} is calling'.format(func.__name__))
+    return func(*args, **kwargs)
+  return decorator
+
+def tag(tagName):
+  def tag_decorator(func):
+    def decorator(*args, **kwargs):
+      return '<{0}>{1}</{0}>'.format(tagName, func(*args, **kwargs))
+    return decorator
+  return tag_decorator
+
+@tag('p')
+@log
+def greet(name):
+  return 'Hello {}'.format(name)
+```
+
+* [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)
+* [A guide to Python's function decorators](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/)
