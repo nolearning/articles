@@ -14,3 +14,7 @@
 
 * [FastCGI wikipedia](https://en.wikipedia.org/wiki/FastCGI)
 
+## WSGI
+* The Web Server Gateway Interface (WSGI) is a simple calling convention for web servers to forward requests to web applications or frameworks written in the Python programming language.
+* [Web Server Gateway Interface wikipedia](https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface)
+* [PEP 3333 -- Python Web Server Gateway Interface v1.0.1](https://www.python.org/dev/peps/pep-3333/)
