@@ -145,6 +145,13 @@ python setup.py install
 * [Python - Extension Programming with C](https://www.tutorialspoint.com/python/python_further_extensions.htm)
 
 ## Python Debug
+### PDB
+* `import pdb; pdb.set_trace()`
+* `breakpoint()` # starting in python3.7
+* `python -m pdb some.py`
+
+* [Python Debugging With Pdb](https://realpython.com/python-debugging-pdb/)
+* [pdb — The Python Debugger](https://docs.python.org/3/library/pdb.html)
 
 ### Debug with GDB or LLDB
 
