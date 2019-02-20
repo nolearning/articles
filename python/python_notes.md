@@ -105,6 +105,20 @@ def greet(name):
 * [Modules](https://docs.python.org/2/tutorial/modules.html)
 * [What is __init__.py for?](https://stackoverflow.com/questions/448271/what-is-init-py-for)
 
+## Disassembler for Python bytecode
+```python
+def func(alist):
+  return len(alist)
+  
+import dis
+dis.dis(func)
+ 2           0 LOAD_GLOBAL              0 (len)
+              3 LOAD_FAST                0 (alist)
+              6 CALL_FUNCTION            1
+              9 RETURN_VALUE
+```
+* [32.12. dis — Disassembler for Python bytecode](https://docs.python.org/3/library/dis.html)
+
 ## Python C Extensions
 1. write a c extension
 ```C
