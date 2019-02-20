@@ -154,7 +154,37 @@ python setup.py install
 * [pdb — The Python Debugger](https://docs.python.org/3/library/pdb.html)
 
 ### Debug with GDB or LLDB
-
+* gdb
+  - GDB 7+ has built-in python intergrations
+  - debugging symbols
+  ```shell
+  gcc -g #compile python with debug info
+  #ubuntu
+  sudo apt install python-dbg libpython-dbg
+  #centos
+  yum instlal python-debuginfo
+  ```
+  - For processes that aren't your descendants
+    - sysctl kern.global-ptrace=1 (OpenBSD)
+    - sysctl kernel.yama.ptrace_scopre=0 (Linux) (if you have a YAMA-enabled kernel)
+    - Don't enable these in production, they have serious security implications!
+  - debug
+  ```shell
+  gdb --args python <program>.py <arguments>
+  # or
+  gdb python
+  ...
+  (gdb) run <program>.py <arguments>
+  # or if the process is already running
+  gdb python <pid of running process>
+  ```
+  - commands
+  `py-bt, py-list` etc.
+  
+* [DebuggingWithGdb](https://wiki.python.org/moin/DebuggingWithGdb)
+* [Debugging of CPython processes with gdb](https://www.podoliaka.org/2016/04/10/debugging-cpython-gdb/)
+* [22. gdb Support](https://devguide.python.org/gdb/)
+* [Debugging: stepping through Python script using gdb?](https://stackoverflow.com/questions/7412708/debugging-stepping-through-python-script-using-gdb)
 * lldb
 ```
 lldb
