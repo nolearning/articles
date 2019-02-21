@@ -3,12 +3,23 @@
 ## tutorials
 [Qt5 tutorial](http://zetcode.com/gui/qt5/)
 
+## UI Libs
+1. QML Graphical User Interfaces, (better for mobile application)
+2. Widget-based User Interfaces, (desktop environments)
+3. Displaying Web Content
+
+* [User Interfaces](https://doc.qt.io/qt-5/topics-ui.html)
+
 ## QML and QtQuick
 * QML is the name of the language
 * QtQuick is a toolkit for QML, allowing to develop graphical interface in QML language
 * QML engine was based on JsCore (JS engine of Webkit) in Qt4.x and was rebased on V8 (JS engine of Google Chrome) with 5.0 but this disallows to use it on mobiles and especially on iOS, so Qt5.2 introduced a new QML engine, named V4VM, created by/for Qt guys.
 ----------
 * [Difference between qt qml and qt quick](https://stackoverflow.com/a/19837895)
+
+## Signals and Slots
+* [Signals & Slots](https://doc.qt.io/qt-5/signalsandslots.html)
+
 
 ## QT Examples
 * [Qt Quick Examples - Views](https://doc.qt.io/qt-5/qtquick-views-example.html)
@@ -38,3 +49,12 @@
 
 ## PyQT
 * [Getting Started with PyQt](https://wiki.python.org/moin/PyQt/Tutorials)
+* [PyQt Signals and Slots](http://benhoff.net/pyqt-signals-slots.html)
+* [[Quick PyQt5 : 1] Signal and Slot Example in PyQt5](https://blog.manash.me/quick-pyqt5-1-signal-and-slot-example-in-pyqt5-bf502ccaf11d)
+
+* [function of pyqtSlot [duplicate]](https://stackoverflow.com/questions/45841843/function-of-pyqtslot)
+* [Why do I need to decorate connected slots with pyqtSlot?](https://stackoverflow.com/questions/40325953/why-do-i-need-to-decorate-connected-slots-with-pyqtslot)
+* [PyQt: Connecting a signal to a slot to start a background operation](https://stackoverflow.com/a/20818401)
+
+* [Using PyInstaller](https://pyinstaller.readthedocs.io/en/stable/usage.html)
+* [CREATING AN EXECUTABLE WITH PYQT5, PYINSTALLER, AND MORE](https://blog.aaronhktan.com/posts/2018/05/14/pyqt5-pyinstaller-executable#33-creating-a-deb-file-for-ubuntu)
