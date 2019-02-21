@@ -15,6 +15,8 @@
 * [Qt Quick Examples - Window and Screen](https://doc.qt.io/qt-5/qtquick-window-example.html)
 * [zhengtianzuo/QtQuickExamples](https://github.com/zhengtianzuo/QtQuickExamples)
 * [Address Book Example](https://doc.qt.io/qt-5/qtwidgets-itemviews-addressbook-example.html)
+* [SDI Example](https://doc.qt.io/qt-5/qtwidgets-mainwindows-sdi-example.html)
+* [Main Window](https://doc.qt.io/qt-5/qtwidgets-mainwindows-mainwindow-example.html)
 * [Coquillo - MP3 Taggers](https://github.com/probonopd/linuxdeployqt/)
 * [ErwanLegrand/Traverso-DAW](https://github.com/ErwanLegrand/Traverso-DAW)
 * [papyros/qml-material](https://github.com/papyros/qml-material)
