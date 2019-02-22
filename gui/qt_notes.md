@@ -3,19 +3,51 @@
 ## tutorials
 [Qt5 tutorial](http://zetcode.com/gui/qt5/)
 
-## UI Libs
+## QT Graphics
+* [Graphics](https://doc.qt.io/qt-5/topics-graphics.html)
+* [Paint System](https://doc.qt.io/qt-5/paintsystem.html)
+* [Qt Graphics and Performance – An Overview](https://blog.qt.io/blog/2009/12/16/qt-graphics-and-performance-an-overview/)
+* [QtWS15- Using the Qt Quick Scene Graph API, Jocelyn Turcotte, Woboq GmbH](https://www.youtube.com/watch?v=cNE6Jabxxxo)
+
+## UI
+* [Layout Management](https://doc.qt.io/qt-5/layout.html)
+
+### UI Libs
 1. QML Graphical User Interfaces, (better for mobile application)
 2. Widget-based User Interfaces, (desktop environments)
 3. Displaying Web Content
 
 * [User Interfaces](https://doc.qt.io/qt-5/topics-ui.html)
 
+### Widget
+* [Window and Dialog Widgets](https://doc.qt.io/qt-5/application-windows.html)
+* [Application Main Window](https://doc.qt.io/qt-5/mainwindow.html)
+
+#### Alien Widget
+* Before QT4.4 there were flicker issues
+* QT4.4 introduce alien widget to sovle the issue
+* In Qt5 `winEvent` was replaced by `nativeEvent`
+--------------
+* [Native Widgets vs Alien Widgets](https://doc.qt.io/qt-5/qwidget.html#native-widgets-vs-alien-widgets)
+* [Qt Invaded By Aliens — The End of All Flicker](https://blog.qt.io/blog/2007/08/09/qt-invaded-by-aliens-the-end-of-all-flicker/)
+* [QWidget 之paint部分杂记](https://blog.csdn.net/dbzhang800/article/details/6835722)
+* [QWidget之Alien与Native小记](https://blog.csdn.net/dbzhang800/article/details/7006270)
+* [Get HWND on windows with Qt5 (from WId)](https://stackoverflow.com/questions/14048565/get-hwnd-on-windows-with-qt5-from-wid)
+* [Qt Widget In-Depth](https://www.slideshare.net/qtbynokia/qwidget-indepth)
+* [How to Make Your Qt App Look Native](https://www.slideshare.net/qtbynokia/how-to-make-your-qt-app-look-native)
+
+* [Native look and feel](https://blog.qt.io/blog/2017/02/06/native-look-feel/)
+
 ## QML and QtQuick
 * QML is the name of the language
 * QtQuick is a toolkit for QML, allowing to develop graphical interface in QML language
 * QML engine was based on JsCore (JS engine of Webkit) in Qt4.x and was rebased on V8 (JS engine of Google Chrome) with 5.0 but this disallows to use it on mobiles and especially on iOS, so Qt5.2 introduced a new QML engine, named V4VM, created by/for Qt guys.
+* Qt Quick 2 makes use of a dedicated scene graph based and a series of adaptations of which the default uses OpenGL ES 2.0 or OpenGL 2.0 for its rendering. 
 ----------
 * [Difference between qt qml and qt quick](https://stackoverflow.com/a/19837895)
+
+* [Qt Quick Scene Graph](https://doc.qt.io/qt-5/qtquick-visualcanvas-scenegraph.html)
+* [QtWS15- Using the Qt Quick Scene Graph API, Jocelyn Turcotte, Woboq GmbH](https://www.youtube.com/watch?v=cNE6Jabxxxo)
 
 ## Signals and Slots
 * [Signals & Slots](https://doc.qt.io/qt-5/signalsandslots.html)
