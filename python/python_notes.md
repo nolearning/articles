@@ -26,8 +26,29 @@
   pip -r reuiqrements.txt
   ```
   
-  
-  
+## Inheritance
+
+### super
+`super()` lets you avoid referring to the base class explicitly. In python 3, just say `super().__init__()` instead of `super(Child, self).__init__()`.
+
+```python
+class MyParentClass(object):
+  def __init__(self):
+    pass
+
+# python 2
+class SubClass(MyParentClass):
+  def __init__(self):
+    super(SubClass, self).__init__()
+    
+# python 3
+class SubClass(MyParentClass):
+  def __init__(self):
+    super()
+```
+
+* [Working with the Python Super Function](https://www.pythonforbeginners.com/super/working-python-super-function)
+
 ## Formatting
 * % - old style
 * '{}'.format - new style
