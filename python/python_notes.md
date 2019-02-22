@@ -50,6 +50,7 @@ class SubClass(MyParentClass):
 * [Working with the Python Super Function](https://www.pythonforbeginners.com/super/working-python-super-function)
 * [What does 'super' do in Python?](https://stackoverflow.com/questions/222877/what-does-super-do-in-python)
 * [Understanding Python super() with __init__() methods [duplicate]](https://stackoverflow.com/questions/576169/understanding-python-super-with-init-methods)
+
 ## Formatting
 * % - old style
 * '{}'.format - new style
@@ -123,9 +124,11 @@ def greet(name):
 * Path entry finders, responsible for finding and loading Python modules and packages whose location is specified with a string path entry. Most path entries name locations in the file system, but they need not be limited to this.
   - The path based finder is a meta path finder, so the import machinery begins the import path search by calling the path based finder’s find_spec() method as described previously. 
 
+------------
 * [The import system](https://docs.python.org/3/reference/import.html)
 * [Modules](https://docs.python.org/2/tutorial/modules.html)
 * [What is __init__.py for?](https://stackoverflow.com/questions/448271/what-is-init-py-for)
+* [Does python optimize modules when they are imported multiple times?](https://stackoverflow.com/questions/296036/does-python-optimize-modules-when-they-are-imported-multiple-times)
 
 ## Mixin
 mixins are used:
