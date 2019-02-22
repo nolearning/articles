@@ -29,7 +29,7 @@
 ## Inheritance
 
 ### super
-`super()` lets you avoid referring to the base class explicitly. In python 3, just say `super().__init__()` instead of `super(Child, self).__init__()`.
+`super()` lets you avoid referring to the base class explicitly. In python 3+, the syntax for super is: `super().method(args)`, whereas, in python 2, `super(subClass, instance).method(args)`
 
 ```python
 class MyParentClass(object):
@@ -48,7 +48,8 @@ class SubClass(MyParentClass):
 ```
 
 * [Working with the Python Super Function](https://www.pythonforbeginners.com/super/working-python-super-function)
-
+* [What does 'super' do in Python?](https://stackoverflow.com/questions/222877/what-does-super-do-in-python)
+* [Understanding Python super() with __init__() methods [duplicate]](https://stackoverflow.com/questions/576169/understanding-python-super-with-init-methods)
 ## Formatting
 * % - old style
 * '{}'.format - new style
@@ -125,6 +126,99 @@ def greet(name):
 * [The import system](https://docs.python.org/3/reference/import.html)
 * [Modules](https://docs.python.org/2/tutorial/modules.html)
 * [What is __init__.py for?](https://stackoverflow.com/questions/448271/what-is-init-py-for)
+
+## Mixin
+mixins are used:
+1. You want to provide a lot of optional features for a class.
+2. You want to use one particular feature in a lot of different classes.
+
+Before 2.2, the implementation was: `depth first and then left to right`
+```python
+def classic_lookup(cls, name):
+    "Look up name in cls and its base classes."
+    if cls.__dict__.has_key(name):
+        return cls.__dict__[name]
+    for base in cls.__bases__:
+        try:
+            return classic_lookup(base, name)
+        except AttributeError:
+            pass
+    raise AttributeError, name
+```
+so for a multiple inheritance
+```
+              class A:
+                ^ ^  def save(self): ...
+               /   \
+              /     \
+             /       \
+            /         \
+        class B     class C:
+            ^         ^  def save(self): ...
+             \       /
+              \     /
+               \   /
+                \ /
+              class D
+```
+the classic lookup rule visits the classes would be: `D B A C A`
+``` python
+d = new D()
+d.save() // ==> call A.save not C.save
+```
+### C3 algorithm
+
+* [The Python 2.3 Method Resolution Order](https://www.python.org/download/releases/2.3/mro/)
+* [Python Method Resolution Order](https://medium.com/technology-nineleaps/python-method-resolution-order-4fd41d2fcc)
+
+### Mixins and super()
+```python
+# python 3 syntax
+class BaseClass(object):
+  def test(self):
+    print("BaseClass")
+
+class Mixin1(object):
+  def test(self):
+    super().test()
+    print("Mixin1")
+
+class Mixin2(object):
+  def test(self):
+    super().test()
+    print("Mixin2")
+
+class MyClass(Mixin2, Mixin1, BaseClass):
+  pass
+  
+obj = MyClass()
+obj.test()
+# print -> BaseClass\n Mixin1\n Mixin2
+
+# python 2 syntax
+class BaseClass(object):
+  def test(self):
+    print "BaseClass"
+
+class Mixin1(object):
+  def test(self):
+    super(Mixin1, self).test()
+    print "Mixin1"
+
+class Mixin2(object):
+  def test(self):
+    super(Mixin2, self).test()
+    print "Mixin2"
+
+class MyClass(Mixin2, Mixin1, BaseClass):
+  pass
+  
+obj = MyClass()
+obj.test()
+```
+------------
+[Mixins and Python](https://www.ianlewis.org/en/mixins-and-python)
+[The Sadness of Python's super()](http://blog.codekills.net/2014/04/02/the-sadness-of-pythons-super/)
 
 ## Disassembler for Python bytecode
 ```python
