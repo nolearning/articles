@@ -81,6 +81,18 @@ def greet(name):
 * [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)
 * [A guide to Python's function decorators](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/)
 
+## MetaClass
+
+* [Metaprogramming in Python](https://developer.ibm.com/tutorials/ba-metaprogramming-python/)
+* [Advanced use of Python decorators and metaclasses](http://blog.thedigitalcatonline.com/blog/2014/10/14/decorators-and-metaclasses/)
+* [Python Metaclasses](https://realpython.com/python-metaclasses/)
+* [Metaprogramming](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html)
+* [__metaclass__ in Python3.5](https://stackoverflow.com/questions/39013249/metaclass-in-python3-5)
+
+## abc(Abastract Base Class)
+
+* [abc — Abstract Base Classes](https://docs.python.org/3/library/abc.html)
+
 ## Modules
 * A module is a file containing Python definitions and statements.
 * `import module as alias_module`
