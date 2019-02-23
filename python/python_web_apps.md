@@ -6,6 +6,58 @@
 ## Flask
 * [Flask源码剖析](https://zhuanlan.zhihu.com/p/24629677)
 
+## sqlalchemy
+
+* [SQL Expression Language Tutorial](https://docs.sqlalchemy.org/en/latest/core/tutorial.html)
+* [Object Relational Tutorial](https://docs.sqlalchemy.org/en/latest/orm/tutorial.html)
+* [SQLAlchemy in Flask](http://flask.pocoo.org/docs/1.0/patterns/sqlalchemy/)
+
+### engine, connection and session
+
+* [SQLAlchemy: engine, connection and session difference](https://stackoverflow.com/questions/34322471/sqlalchemy-engine-connection-and-session-difference)
+* [Understanding Python SQLAlchemy’s Session](https://www.pythoncentral.io/understanding-python-sqlalchemy-session/)
+* [Working with Engines and Connections](https://docs.sqlalchemy.org/en/latest/core/connections.html)
+
+#### session in concurrency
+* Session objects are not thread-safe
+* The `ScopeSession` is thread safe
+
+* [Contextual/Thread-local Sessions](https://docs.sqlalchemy.org/en/latest/orm/contextual.html)
+
+
+### raw sql
+* [Using raw SQL with Flask-SQLAlchemy](http://neekey.net/2017/05/19/using-raw-sql-with-flask-sqlalchemy/)
+* [Raw SQL](http://zetcode.com/db/sqlalchemy/rawsql/)
+* [sqlalchemy : executing raw sql with parameter bindings](https://stackoverflow.com/questions/23206562/sqlalchemy-executing-raw-sql-with-parameter-bindings)
+* [How to Execute Raw SQL in SQLAlchemy](https://chartio.com/resources/tutorials/how-to-execute-raw-sql-in-sqlalchemy/)
+
+### ORM
+#### whereclause
+In sqlalchemy, when you call orm_model.select(orm_model.c.column == value), will pass a `sqlalchemy.sql.elements.BinaryExpression object`. 
+
+Why?  
+1. orm_model.c.column is `<class 'sqlalchemy.sql.schema.Column'>` instance
+2. `<class 'sqlalchemy.sql.schema.Column'>` parent classes are `(<class 'sqlalchemy.sql.schema.SchemaItem'>, <class 'sqlalchemy.sql.elements.ColumnClause'>)`
+3. `<class 'sqlalchemy.sql.elements.ColumnClause'>)` parent classes are `(<class 'sqlalchemy.sql.base.Immutable'>, <class 'sqlalchemy.sql.elements.ColumnElement'>)`
+4. `<class 'sqlalchemy.sql.elements.ColumnElement'>)` parent classes are `(<class 'sqlalchemy.sql.operators.ColumnOperators'>, <class 'sqlalchemy.sql.elements.ClauseElement'>)`
+5. `<class 'sqlalchemy.sql.operators.ColumnOperators'>` has operator overloadings, in this case is `ColumnOperators.__eq__`
+6. so `orm_model.c.column == value` will call `ColumnOperators.__eq__` and return `sqlalchemy.sql.elements.BinaryExpression object`. 
+
+--------------
+* [Column Elements and Expressions](https://docs.sqlalchemy.org/en/latest/core/sqlelement.html)
+* [sqlalchemy/lib/sqlalchemy/sql/elements.py](https://github.com/zzzeek/sqlalchemy/blob/master/lib/sqlalchemy/sql/elements.py)
+* [sqlalchemy/lib/sqlalchemy/sql/schema.py](https://github.com/zzzeek/sqlalchemy/blob/master/lib/sqlalchemy/sql/schema.py)
+* [sqlalchemy/lib/sqlalchemy/sql/operators.py](https://github.com/zzzeek/sqlalchemy/blob/master/lib/sqlalchemy/sql/operators.py)
+### tips
+```python
+# show commands SQLAlchemy is sending
+engine = create_engine('dialect+driver://...', echo=True)
+
+```
+-----------
+
+* [Why in SQLAlchemy base.metadata.create_all(engine) in python console not showing table?](https://stackoverflow.com/questions/23705948/why-in-sqlalchemy-base-metadata-create-allengine-in-python-console-not-showing)
+
 ## Deployment
 
 0. Development Server, such as `Django Development Server`, `Flask Simple Server`
