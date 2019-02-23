@@ -57,42 +57,6 @@ class SubClass(MyParentClass):
 
 * [Using % and .format() for great good!](https://pyformat.info/)
 
-## Decorators
-```python
-def log(func):
-  def decorator(*args, **kwargs):
-    print('Log: function {} is calling'.format(func.__name__))
-    return func(*args, **kwargs)
-  return decorator
-
-def tag(tagName):
-  def tag_decorator(func):
-    def decorator(*args, **kwargs):
-      return '<{0}>{1}</{0}>'.format(tagName, func(*args, **kwargs))
-    return decorator
-  return tag_decorator
-
-@tag('p')
-@log
-def greet(name):
-  return 'Hello {}'.format(name)
-```
-
-* [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)
-* [A guide to Python's function decorators](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/)
-
-## MetaClass
-
-* [Metaprogramming in Python](https://developer.ibm.com/tutorials/ba-metaprogramming-python/)
-* [Advanced use of Python decorators and metaclasses](http://blog.thedigitalcatonline.com/blog/2014/10/14/decorators-and-metaclasses/)
-* [Python Metaclasses](https://realpython.com/python-metaclasses/)
-* [Metaprogramming](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html)
-* [__metaclass__ in Python3.5](https://stackoverflow.com/questions/39013249/metaclass-in-python3-5)
-
-## abc(Abastract Base Class)
-
-* [abc — Abstract Base Classes](https://docs.python.org/3/library/abc.html)
-
 ## Modules
 * A module is a file containing Python definitions and statements.
 * `import module as alias_module`
@@ -235,6 +199,78 @@ obj.test()
 [Mixins and Python](https://www.ianlewis.org/en/mixins-and-python)
 [The Sadness of Python's super()](http://blog.codekills.net/2014/04/02/the-sadness-of-pythons-super/)
 
+
+## Decorators
+```python
+def log(func):
+  def decorator(*args, **kwargs):
+    print('Log: function {} is calling'.format(func.__name__))
+    return func(*args, **kwargs)
+  return decorator
+
+def tag(tagName):
+  def tag_decorator(func):
+    def decorator(*args, **kwargs):
+      return '<{0}>{1}</{0}>'.format(tagName, func(*args, **kwargs))
+    return decorator
+  return tag_decorator
+
+@tag('p')
+@log
+def greet(name):
+  return 'Hello {}'.format(name)
+```
+
+* [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/)
+* [A guide to Python's function decorators](https://www.thecodeship.com/patterns/guide-to-python-function-decorators/)
+
+## MetaClass
+
+* [Metaprogramming in Python](https://developer.ibm.com/tutorials/ba-metaprogramming-python/)
+* [Advanced use of Python decorators and metaclasses](http://blog.thedigitalcatonline.com/blog/2014/10/14/decorators-and-metaclasses/)
+* [Python Metaclasses](https://realpython.com/python-metaclasses/)
+* [Metaprogramming](https://python-3-patterns-idioms-test.readthedocs.io/en/latest/Metaprogramming.html)
+* [__metaclass__ in Python3.5](https://stackoverflow.com/questions/39013249/metaclass-in-python3-5)
+
+### abc(Abastract Base Class)
+
+* [abc — Abstract Base Classes](https://docs.python.org/3/library/abc.html)
+
+### exec
+
+* [exec](https://docs.python.org/3/library/functions.html#exec)
+* [collection.py -- namedtuple](https://svn.python.org/projects/python/trunk/Lib/collections.py)
+
+
+## apis
+### namedtuple
+```python
+from collections import namedtuple
+d = {"name": "joe", "age": 20}
+employee1 = namedtuple("Employee", d.keys())(*d.values())
+```
+-----------
+* [How to convert Python dict to class object with fields](https://codeyarns.com/2017/02/27/how-to-convert-python-dict-to-class-object-with-fields/)
+* [namedtuple - PyMOTW](https://pymotw.com/2/collections/namedtuple.html)
+
+### setattr
+```python
+class Dict2Obj(object):
+  def __init__(self, dictionary):
+    for key in dictionary:
+      setattr(self, key, dictionary[key])
+
+    def __repr__(self):
+        """"""
+        attrs = str([x for x in self.__dict__])
+        return "<Dict2Obj: %s>" % attrs
+ball_dict = {"color":"blue",
+             "size":"8 inches",
+             "material":"rubber"}
+ball = Dict2Obj(ball_dict)
+
+* [Python 101: How to Change a Dict Into a Class](https://www.blog.pythonlibrary.org/2014/02/14/python-101-how-to-change-a-dict-into-a-class/)
+* [setattr](https://docs.python.org/3/library/functions.html#setattr)
 ## Disassembler for Python bytecode
 ```python
 def func(alist):
