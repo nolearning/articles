@@ -51,6 +51,23 @@ class SubClass(MyParentClass):
 * [What does 'super' do in Python?](https://stackoverflow.com/questions/222877/what-does-super-do-in-python)
 * [Understanding Python super() with __init__() methods [duplicate]](https://stackoverflow.com/questions/576169/understanding-python-super-with-init-methods)
 
+#### Base Class
+Using `cls.__bases__` to get the tuple of base classes of a class object.
+```python
+class A(object):
+  pass
+  
+class B(object):
+  pass
+  
+class C(A, B):
+  pass
+  
+print(c.__bases__)
+# (<class '__main__.A'>, <class '__main__.B'>)
+```
+* [How to get the parents of a Python class?](https://stackoverflow.com/questions/2611892/how-to-get-the-parents-of-a-python-class)
+
 ## Formatting
 * % - old style
 * '{}'.format - new style
@@ -199,6 +216,16 @@ obj.test()
 [Mixins and Python](https://www.ianlewis.org/en/mixins-and-python)
 [The Sadness of Python's super()](http://blog.codekills.net/2014/04/02/the-sadness-of-pythons-super/)
 
+## Magic Method and Operator Overloading
+
+* [A Guide to Python's Magic Methods](https://rszalski.github.io/magicmethods/)
+* [3. Data model](https://docs.python.org/3/reference/datamodel.html)
+
+* [Python Operator Overloading](https://thepythonguru.com/python-operator-overloading/)
+* [Operator Overloading in Python](https://blog.teamtreehouse.com/operator-overloading-python)
+
+### reflection
+* [Python Programming/Reflection](https://en.wikibooks.org/wiki/Python_Programming/Reflection)
 
 ## Decorators
 ```python
@@ -240,6 +267,7 @@ def greet(name):
 
 * [exec](https://docs.python.org/3/library/functions.html#exec)
 * [collection.py -- namedtuple](https://svn.python.org/projects/python/trunk/Lib/collections.py)
+
 
 
 ## apis
