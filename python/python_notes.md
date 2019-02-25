@@ -49,7 +49,7 @@ class SubClass(MyParentClass):
 
 * [Working with the Python Super Function](https://www.pythonforbeginners.com/super/working-python-super-function)
 * [What does 'super' do in Python?](https://stackoverflow.com/questions/222877/what-does-super-do-in-python)
-* [Understanding Python super() with __init__() methods [duplicate]](https://stackoverflow.com/questions/576169/understanding-python-super-with-init-methods)
+* [Understanding Python super() with \_\_init\_\_() methods [duplicate]](https://stackoverflow.com/questions/576169/understanding-python-super-with-init-methods)
 
 #### Base Class
 Using `cls.__bases__` to get the tuple of base classes of a class object.
@@ -83,6 +83,7 @@ print(c.__bases__)
 * [Python: How to set local variable in list comprehension?](https://stackoverflow.com/questions/26672532/python-how-to-set-local-variable-in-list-comprehension)
 * [Converting a loop with an assignment into a comprehension [duplicate]](https://stackoverflow.com/questions/29980865/converting-a-loop-with-an-assignment-into-a-comprehension)
 * [How do I define a variable in a list comprehension? [duplicate](https://stackoverflow.com/questions/39016630/how-do-i-define-a-variable-in-a-list-comprehension)
+* [Python Concepts/List Comprehension](https://en.wikiversity.org/wiki/Python_Concepts/List_Comprehension)
 
 ## Modules
 * A module is a file containing Python definitions and statements.
