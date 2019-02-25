@@ -74,6 +74,16 @@ print(c.__bases__)
 
 * [Using % and .format() for great good!](https://pyformat.info/)
 
+## list comprehension
+* mimic local variable
+```python
+[reused_value for reused_value in ( handled_item for item in collection)]
+```
+----------------
+* [Python: How to set local variable in list comprehension?](https://stackoverflow.com/questions/26672532/python-how-to-set-local-variable-in-list-comprehension)
+* [Converting a loop with an assignment into a comprehension [duplicate]](https://stackoverflow.com/questions/29980865/converting-a-loop-with-an-assignment-into-a-comprehension)
+* [How do I define a variable in a list comprehension? [duplicate](https://stackoverflow.com/questions/39016630/how-do-i-define-a-variable-in-a-list-comprehension)
+
 ## Modules
 * A module is a file containing Python definitions and statements.
 * `import module as alias_module`
