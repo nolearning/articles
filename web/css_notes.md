@@ -129,3 +129,8 @@ div.container3 p {
 * [Centering in the Unknown](https://css-tricks.com/centering-in-the-unknown/)
 * [How do I center an image if it's wider than its container?](https://stackoverflow.com/questions/3300660/how-do-i-center-an-image-if-its-wider-than-its-container)
 * [Centering Mixin](https://css-tricks.com/snippets/sass/centering-mixin/)
+
+## Responsive
+
+* [移动端页面开发适配 rem布局原理](https://segmentfault.com/a/1190000007526917)
+* [移动端页面布局及字体大小该如何设置](https://segmentfault.com/a/1190000004344753)
