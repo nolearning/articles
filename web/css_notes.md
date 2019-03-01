@@ -130,7 +130,12 @@ div.container3 p {
 * [How do I center an image if it's wider than its container?](https://stackoverflow.com/questions/3300660/how-do-i-center-an-image-if-its-wider-than-its-container)
 * [Centering Mixin](https://css-tricks.com/snippets/sass/centering-mixin/)
 
+## Font
+
+* [(如何优雅的选择字体(font-family)](https://segmentfault.com/a/1190000006110417)
+
 ## Responsive
 
 * [移动端页面开发适配 rem布局原理](https://segmentfault.com/a/1190000007526917)
 * [移动端页面布局及字体大小该如何设置](https://segmentfault.com/a/1190000004344753)
+* [前端移动端适配总结](https://segmentfault.com/a/1190000011586301)
