@@ -139,3 +139,6 @@ div.container3 p {
 * [移动端页面开发适配 rem布局原理](https://segmentfault.com/a/1190000007526917)
 * [移动端页面布局及字体大小该如何设置](https://segmentfault.com/a/1190000004344753)
 * [前端移动端适配总结](https://segmentfault.com/a/1190000011586301)
+
+* [Pure CSS to make font-size responsive based on dynamic amount of characters](https://stackoverflow.com/questions/14431411/pure-css-to-make-font-size-responsive-based-on-dynamic-amount-of-characters)
+* [Viewport Sized Typography](https://css-tricks.com/viewport-sized-typography/)
