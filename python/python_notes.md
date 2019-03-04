@@ -68,13 +68,64 @@ print(c.__bases__)
 ```
 * [How to get the parents of a Python class?](https://stackoverflow.com/questions/2611892/how-to-get-the-parents-of-a-python-class)
 
+## string
+### substring
+```python
+string[start:end] # Get all characters from index start to end-1
+string[:end] # Get all characters from the beginning of the string to end-1
+string[start:] # Get all characters from index start to the end of the string
+string[start:end:step] # Get all characters from start to end-1 discounting every step character
+```
+* [Is There a Way to Substring a String in Python](https://guide.freecodecamp.org/python/is-there-a-way-to-substring-a-string-in-python/)
+
+## with statement
+```python
+with EXPR as VAR:
+    BLOCK
+
+# translate to
+mgr = (EXPR)
+exit = type(mgr).__exit__  # Not calling it yet
+value = type(mgr).__enter__(mgr)
+exc = True
+try:
+    try:
+        VAR = value  # Only if "as VAR" is present
+        BLOCK
+    except:
+        # The exceptional case is handled here
+        exc = False
+        if not exit(mgr, *sys.exc_info()):
+            raise
+        # The exception is swallowed if exit() returns true
+finally:
+    # The normal and non-local-goto cases are handled here
+    if exc:
+        exit(mgr, None, None, None)
+```
+* VAR is a single assignment target. It can not be a comma-separated sequence of variables, but it can be a parenthesized comma-separated sequence of variables. 
+* Using these magic methods (__enter__, __exit__) allows you to implement objects which can be used easily with the with statement.
+
+---------
+* [PEP 343 -- The "with" Statement](https://www.python.org/dev/peps/pep-0343/)
+* [Explaining Python's '__enter__' and '__exit__'](https://stackoverflow.com/questions/1984325/explaining-pythons-enter-and-exit)
+* [Understanding Python's "with" statement](http://effbot.org/zone/python-with-statement.htm)
+
 ## Formatting
 * % - old style
 * '{}'.format - new style
 
 * [Using % and .format() for great good!](https://pyformat.info/)
 
-## list comprehension
+## list
+
+### make list distinct
+```python
+list(set(dup_list))
+```
+* [Removing duplicates in lists](https://stackoverflow.com/questions/7961363/removing-duplicates-in-lists)
+
+## comprehension
 * mimic local variable
 ```python
 [reused_value for reused_value in ( handled_item for item in collection)]
