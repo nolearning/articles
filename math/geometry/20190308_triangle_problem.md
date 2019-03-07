@@ -11,6 +11,18 @@ A                  B
 ## solution 1
 用正弦定理加上倍角公式
 
+AB/sin4A = AC / sin2A = BC / sinA 
+
+1/AB + 1/AC = 1/BC * (sinA/sin2A + sinA/sin4A) 
+
+sinA/sin2A + sinA/sin4A = 2sinAcos2A/sin4A + sinA/sin4A = (2sinA * (1-2sinA * sinA) + sinA)/sin4A = sin3A / sin4A
+
+3A + 4A = 180, sin3A / sin4A = 1
+
+sinA/sin2A + sinA/sin4A = 1
+
+* [倍角公式](https://baike.baidu.com/item/%E5%80%8D%E8%A7%92%E5%85%AC%E5%BC%8F)
+* [正弦定理](https://baike.baidu.com/item/%E6%AD%A3%E5%BC%A6%E5%AE%9A%E7%90%86)
 ## solution 2
 
 > thinking
