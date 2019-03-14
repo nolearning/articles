@@ -23,7 +23,6 @@
 * JavaScript
   - [V8 Garbage Collector](https://github.com/thlorenz/v8-perf/blob/master/gc.md)
   - [浅谈V8引擎中的垃圾回收机制](https://segmentfault.com/a/1190000000440270)
-
-  
-  
-  
+* Go
+  - [Go Memory Management](https://povilasv.me/go-memory-management/)
+  - [图解Go语言内存分配](https://mp.weixin.qq.com/s/Hm8egXrdFr5c4-v--VFOtg)
